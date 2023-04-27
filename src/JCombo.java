@@ -29,7 +29,7 @@ public class JCombo extends JFrame implements ActionListener {
         ButtonGroup bg2 = new ButtonGroup();
         bg2.add(rb3);bg2.add(rb4);
 
-        l1 = new JLabel("image label");
+        l1 = new JLabel();
         l2 = new JLabel("Choose: ");
         l3 = new JLabel("Black Color?");
 
@@ -43,6 +43,17 @@ public class JCombo extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == rb1){
             ImageIcon img = new ImageIcon( new ImageIcon("bird.jpg").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+            l1.setIcon(img);
+        }
+        else if (e.getSource() == rb2){
+            ImageIcon img = new ImageIcon( new ImageIcon("dog.jpg").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+            l1.setIcon(img);
+        }
+        else if (e.getSource() == rb3){
+            getContentPane().setBackground(Color.GREEN);
+        }
+        else if (e.getSource() == rb4){
+            ImageIcon img = new ImageIcon( new ImageIcon("dog.jpg").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
             l1.setIcon(img);
         }
 
